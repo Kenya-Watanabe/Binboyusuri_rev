@@ -9,14 +9,35 @@
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
               tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/toGyroButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Gyro"
-        android:onClick="toGyro"/>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/toGyroButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Gyro"
+            android:onClick="toGyro"/>
+        <Button
+            android:id="@+id/StartServiceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="start Service"
+            android:onClick="onClickStartService"/>
+        <Button
+            android:id="@+id/stopServiceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="stop Service"
+            android:onClick="onClickStopService"/>
+
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/accelxText"

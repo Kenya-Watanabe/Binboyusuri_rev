@@ -66,31 +66,31 @@ public class GraphShowActivity extends AppCompatActivity {
             runFlag = false;
         }
 
-        public void run(){
-            while(runFlag){
-                handler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        tAccelX.setText("X"+accelerometerAdapter.getDiffAccelX());
-                        tAccelY.setText("Y:"+accelerometerAdapter.getDiffAccelY());
-                        tAccelZ.setText("Z:"+accelerometerAdapter.getDiffAccelZ());
-
-                        gAccelX.setDiv(accelerometerAdapter.getDiffAccelX());//graphの値はdiffAccelXの10倍
-                        gAccelY.setDiv(accelerometerAdapter.getDiffAccelY());
-                        gAccelZ.setDiv(accelerometerAdapter.getDiffAccelZ());
-                        //Graphの再描画
-                        gAccelX.invalidate();
-                        gAccelY.invalidate();
-                        gAccelZ.invalidate();
-                    }
-                });
-                try{
-                    Thread.sleep(100);
-                }catch (InterruptedException e){
-                    e.printStackTrace();
-                }
-            }
-        }
+//        public void run(){
+//            while(runFlag){
+//                handler.post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        tAccelX.setText("X"+accelerometerAdapter.getDiffAccelX());
+//                        tAccelY.setText("Y:"+accelerometerAdapter.getDiffAccelY());
+//                        tAccelZ.setText("Z:"+accelerometerAdapter.getDiffAccelZ());
+//
+//                        gAccelX.setDiv(accelerometerAdapter.getDiffAccelX());//graphの値はdiffAccelXの10倍
+//                        gAccelY.setDiv(accelerometerAdapter.getDiffAccelY());
+//                        gAccelZ.setDiv(accelerometerAdapter.getDiffAccelZ());
+//                        //Graphの再描画
+//                        gAccelX.invalidate();
+//                        gAccelY.invalidate();
+//                        gAccelZ.invalidate();
+//                    }
+//                });
+//                try{
+//                    Thread.sleep(100);
+//                }catch (InterruptedException e){
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
 
 
     }
