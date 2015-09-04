@@ -78,8 +78,9 @@ public class GraphView extends View {
 
         //現在線を赤線で表示
         paint.setColor(Color.RED);
-        canvas.drawLine(4*counter, 0, 4*counter, height, paint);
+        canvas.drawLine(4 * counter, 0, 4 * counter, height, paint);
 
+        Log.i("GraphView", "counter: " + counter);
         Log.i("GraphView", "counter: " + counter);
 
 
